@@ -50,7 +50,7 @@ const lkapi = require('livekit-server-sdk');
       roomJoin: true,
     })
 
-    const url = `https://example.livekit.io/#/room?url=${encodeURIComponent(process.env.LIVEKIT_HOST)}&token=${at.toJwt()}&videoEnabled=${enablePublish}&audioEnabled=${enablePublish}&simulcast=${enablePublish}`
+    const url = `https://example.livekit.io/#/room?url=${encodeURIComponent(process.env.LIVEKIT_HOST)}&token=${at.toJwt()}&videoEnabled=${enablePublish}&audioEnabled=${enablePublish}&simulcast=${enablePublish}&dynacast=1&adaptiveStream=1`
     const page = await browser.newPage();
     page
       .on('console', message =>
